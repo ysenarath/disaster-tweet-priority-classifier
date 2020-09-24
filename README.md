@@ -1,3 +1,7 @@
+## Thanks
+
+This is a fork of https://github.com/jitinkrishnan/Quick-Deployables.
+
 # Quick-Deployables
 Presenting quick deployable models (that are trained using tweets collected from 20 different crisis events labeled for priority/urgency) to filter critical messages during a crisis response.
 
