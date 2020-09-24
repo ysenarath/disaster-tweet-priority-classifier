@@ -1,10 +1,12 @@
+import sys
+
 import numpy as np
 import torch
 import torch.nn as nn
-import sys
-from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler
-from transformers import AutoTokenizer, DistilBertModel, AutoModelForMaskedLM, DistilBertTokenizer
 import transformers
+from torch.utils.data import TensorDataset, DataLoader, RandomSampler
+from transformers import AutoTokenizer, AutoModelForMaskedLM
+
 
 class BERT(nn.Module):
 
@@ -96,7 +98,7 @@ def predict(test_file, hidden_layers, lang, SCRATCH_FNAME):
     model = BERT(bert, max_len, 2, hidden_layers)
 
     ############### predict ##########################
-    #load weights of best model
+    #load weights of best modelyasa
     path = SCRATCH_FNAME
     model = model.cpu()
     model.load_state_dict(torch.load(path, map_location=torch.device('cpu')))
